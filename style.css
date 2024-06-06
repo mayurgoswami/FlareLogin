@@ -1,0 +1,220 @@
+:root {
+    --primary: #255d48;
+    --secondary: #ddefff;
+    --light_primary: #6ea767;
+    --dark_primary: #215441;
+    --login_font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(45deg, var(--secondary), #ffffff);
+    width: -webkit-fill-available;
+    height: 100vh;
+    font-family: var(--login_font);
+    user-select: none;
+}
+
+._flex_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_cointainer {
+    width: clamp(1000px, 800px, 600px);
+    height: clamp(625px, 500px, 375px);
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+}
+
+.company_view {
+    background: url(res/gradient\ background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.company_logo {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.logo_src {
+    width: 90%;
+    height: 90%;
+}
+
+.direct_login_div {
+    width: 80%;
+    height: 7%;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    background: var(--dark_primary);
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.social_logo {
+    height: 100%;
+    width: 45px;
+}
+
+.facebook_logo {
+    border-inline-end: 2px solid #3e61a8;
+}
+
+.login_facebook {
+    background: #4267B2;
+}
+
+.twetter_logo {
+    border-inline-end: 2px solid #f2f2f2;
+}
+
+.login_twetter {
+    background: #fff;
+    color: #1da1f2;
+}
+
+.instagram_logo {
+    border-inline-end: 2px solid #f2f2f2;
+}
+
+.login_instagram {
+    background: #fff;
+}
+
+.social_title {
+    margin-inline-start: 30px;
+    width: fit-content;
+}
+
+.instagram_title {
+    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form * {
+    width: 80%;
+    padding: 10px;
+}
+
+.login_title {
+    color: var(--primary);
+    text-align: center;
+}
+
+.field_label {
+    font-size: 17px;
+}
+
+.pack_field {
+    position: relative;
+}
+
+#username, #password {
+    background: transparent;
+    border-width: 1px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#username:focus, #password:focus {
+    outline-color: var(--primary);
+}
+
+.icon_person, .icon_eye {
+    width: 40px;
+    height: 38px;
+    position: absolute;
+}
+
+.icon_person, .icon_eye {
+    right: 12px;
+    top: 10px;
+}
+.icon_eye {
+    cursor: pointer;
+}
+
+.login_btn {
+    margin: 40px;
+    color: var(--dark_primary);
+    font-size: 17px;
+    background: transparent;
+    border: 2px solid var(--dark_primary);
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.login_btn:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 0 10px var(--light_primary);
+}
+
+@media (max-width: 768px) {
+    .main_cointainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: url(res/gradient\ background.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .company_view {
+        background: transparent;
+        height: 50%;
+    }
+
+    .login_form {
+        background: aliceblue;
+        height: 50%;
+    }
+
+    .icon_person, .icon_eye {
+        right: 12px;
+        top: 10px;
+    }
+
+    .direct_login_div {
+        height: 12%;
+        margin: 5px;
+    }
+}
